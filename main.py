@@ -58,14 +58,17 @@ plt.savefig("visualizations/product_sales_bar_chart.png")
 plt.close()
 
 # Line Chart - Daily Sales Trend
-plt.figure()
+plt.figure(figsize=(10, 5))
 plt.plot(daily_sales.index, daily_sales.values, marker='o')
+
 plt.title("Daily Sales Trend")
 plt.xlabel("Date")
 plt.ylabel("Total Sales")
-plt.tight_layout()
+plt.xticks(rotation=45)   
+plt.tight_layout()        
 plt.savefig("visualizations/daily_sales_line_chart.png")
 plt.close()
+
 
 
 # Step 5: Completion Message
